@@ -1,0 +1,94 @@
+/* Base Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #f8f8f8;
+  padding: 20px;
+  text-align: center;
+}
+
+#logo {
+  width: 80px;
+  height: auto;
+}
+
+/* Hero Section */
+#hero {
+  background: #eaeaea;
+  padding: 40px;
+  text-align: center;
+}
+
+.slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 10px;
+  padding: 20px 0;
+}
+
+.slide {
+  flex: none;
+  width: 300px;
+  scroll-snap-align: center;
+  position: relative;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.caption {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 5px;
+}
+
+/* Past Coffees Gallery */
+#past-coffees .gallery {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+  padding: 20px;
+}
+
+.gallery-item {
+  flex: none;
+  width: 200px;
+  text-align: center;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* About Section */
+#about {
+  padding: 40px;
+  background: #f0f0f0;
+  text-align: center;
+}
+
+/* Admin Panel Styles */
+#admin-panel {
+  padding: 20px;
+  background: #ddd;
+}
+
+/* Admin Toggle Button */
+#admin-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px;
+}

@@ -1,1 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — the friendly roast</title>
+  <meta name="description" content="Get in touch with the friendly roast — questions, orders, or just to talk coffee.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html"><img class="logo-img" src="images/snail.jpg" alt="the friendly roast logo">the friendly roast</a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="coffees.html">Coffees</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <h1>Get in touch</h1>
+      <p class="lead">
+        Request a bag — we fulfil orders for friends
+        and welcome occasional custom.
+      </p>
+    </section>
+
+    <section class="section container">
+      <p>
+        <strong>A quick note:</strong> the friendly roast is a nano roastery.
+        We don't actively sell commercially — we roast in small batches,
+        fulfil orders for friends, and welcome occasional custom.
+      </p>
+      <p>
+        If you'd like a bag, fill in the request below and we'll get back to
+        you with what's fresh and how to get it to you.
+      </p>
+
+      <!-- ==================================================
+           PURCHASE REQUEST FORM — powered by Formspree (free).
+
+           The form only sends once you plug in your own ID:
+             1. Sign up for free at https://formspree.io
+             2. Click "New form" and give it a name
+             3. Copy the form ID (looks like "xqkrostw")
+             4. Replace YOUR_FORM_ID in the action link below
+                with your ID.
+           ================================================== -->
+      <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <label for="name">Your name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Your email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="coffee">Which coffee would you like?</label>
+        <!-- Update the first option whenever the current coffee changes -->
+        <select id="coffee" name="coffee">
+          <option value="mukunga">Mukunga — the current roast</option>
+          <option value="archive">A coffee from the past-roast archive</option>
+          <option value="advice">Not sure — advise me</option>
+        </select>
+
+        <label for="size">How much?</label>
+        <select id="size" name="size">
+          <option value="250g">250 g</option>
+          <option value="500g">500 g</option>
+          <option value="1kg">1 kg</option>
+        </select>
+
+        <label for="message">Anything else? (optional)</label>
+        <textarea id="message" name="message" rows="4"
+          placeholder="Grind preference, notes for delivery, a question…"></textarea>
+
+        <button type="submit" class="btn btn-primary">Send request</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>the friendly roast — small-batch coffee roastery</p>
+      <p>&copy; <span id="year">2026</span> the friendly roast. Roasted with friends, for friends.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>the friendly roast — hey Michael, what's roasting</title>
-  <meta name="description" content="Michael roasts one coffee at a time — a nano roastery roasting in small batches for friends.">
+  <meta name="description" content="the friendly roast — Michael roasts one coffee at a time, tasted and pondered every day while the roast profile adapts.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -23,29 +23,14 @@
   <main>
     <!-- INTRO -->
     <section class="hero container">
-      <h1>Coffee, taking it slow</h1>
-      <p class="lead">Michael roasts one coffee at a time.</p>
+      <h1>Michael roasts one coffee at a time</h1>
     </section>
 
-    <section class="section container">
-      <p>
-        Coffee roasting is a hobby that fits into life — among work, family,
-        music, life. Solving the roast mystery one bean at a time is the
-        chosen pace.
-      </p>
-      <p>
-        That coffee is tasted and pondered every day for months. The roast
-        profile adapts. The longer the coffee is in his possession, the more
-        completely its flavour is communicated through the roast profile.
-      </p>
-    </section>
-
-    <!-- ================= CURRENTLY ROASTING =================
+    <!-- ================= THE CURRENT ROAST =================
          When the current coffee changes: replace the details
          below, and add the old coffee to the coffee archive.
          ================================================ -->
     <section class="section container">
-      <h2>Currently roasting</h2>
       <article class="feature">
         <img class="taste-impression" src="images/mukunga.jpg"
              alt="Taste impression — a little painting of the flavours perceived in Mukunga.">
@@ -75,17 +60,24 @@
       </article>
     </section>
 
-    <!-- ================= REQUEST A BAG ================= -->
+    <!-- THE PACE -->
     <section class="section container">
       <p>
-        the friendly roast is a nano roastery. We don't actively sell
-        commercially — we roast in small batches, fulfil orders for friends,
-        and welcome occasional custom.
+        Coffee roasting is a hobby that fits into life — among work, family,
+        music, life. Solving the roast mystery one coffee at a time is the
+        chosen pace.
       </p>
       <p>
-        If you'd like a bag, fill in the request below to see if and how to
-        get you a bag.
+        That coffee is tasted and pondered every day for months. The roast
+        profile adapts. The longer the coffee is in his possession, the more
+        completely its flavour is communicated through the roast profile.
       </p>
+    </section>
+
+    <!-- ================= REQUEST A BAG ================= -->
+    <section class="section container">
+      <h2>Please can I buy a bag?</h2>
+      <p>Yeah sure, send me a message and I'll get back to you.</p>
 
       <!-- ==================================================
            REQUEST FORM — powered by Formspree (free).
@@ -108,20 +100,25 @@
         <!-- Update the first option whenever the current coffee changes -->
         <select id="coffee" name="coffee">
           <option value="mukunga">Mukunga — the current roast</option>
-          <option value="archive">A coffee from the archive</option>
-          <option value="advice">Not sure — advise me</option>
+          <option value="decaf">Do you roast decaf currently?</option>
+          <option value="not-coffee">This isn't about coffee</option>
         </select>
 
-        <label for="size">How much?</label>
-        <select id="size" name="size">
-          <option value="250g">250 g</option>
-          <option value="500g">500 g</option>
-          <option value="1kg">1 kg</option>
-        </select>
+        <!-- This block hides automatically when "This isn't about coffee"
+             is chosen — see script.js -->
+        <div id="size-row">
+          <label for="size">How much?</label>
+          <select id="size" name="size">
+            <option value="250g">250 g</option>
+            <option value="500g">500 g</option>
+            <option value="1kg">1 kg</option>
+            <option value="custom">I'll write the amount below</option>
+          </select>
+        </div>
 
         <label for="message">Anything else? (optional)</label>
         <textarea id="message" name="message" rows="4"
-          placeholder="Where you live, grind preference, a note…"></textarea>
+          placeholder="Where you live, preferred communication method, a question…"></textarea>
 
         <button type="submit" class="btn btn-primary">Send request</button>
       </form>
@@ -130,6 +127,11 @@
 
   <footer class="footer">
     <div class="container">
+      <nav class="nav">
+        <a href="index.html">hey Michael, what's roasting</a>
+        <a href="about.html">nano-roastery</a>
+        <a href="coffees.html">coffee archive</a>
+      </nav>
       <p>&copy; 2023 the friendly roast. Roasted with friends, for friends.</p>
     </div>
   </footer>

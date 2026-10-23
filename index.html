@@ -1,78 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>The Friendly Roast</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>the friendly roast — small-batch coffee roastery</title>
+  <meta name="description" content="the friendly roast — a small-batch coffee roastery. We roast coffee to see how the flavours transform in each roast, each brew, each sip.">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <!-- Replace "logo.png" with your actual logo image -->
-    <img src="logo.png" alt="The Friendly Roast Logo" id="logo" />
-    <h1>The Friendly Roast</h1>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html"><img class="logo-img" src="images/snail.jpg" alt="the friendly roast logo">the friendly roast</a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="coffees.html">Coffees</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
   </header>
-  
-  <!-- Hero Section with Paintings & Coffee Pairings -->
-  <section id="hero">
-    <h2>Experience the Taste of Art</h2>
-    <div class="slider">
-      <!-- Each "slide" represents a painting and its paired coffee bean -->
-      <div class="slide">
-        <!-- Replace with your actual painting images -->
-        <img src="painting1.jpg" alt="Painting 1">
-        <div class="caption">Coffee Blend A</div>
+
+  <main>
+    <!-- HERO: the big welcome at the top of the page -->
+    <section class="hero container">
+      <h1>Coffee, roasted for friends.</h1>
+      <p class="lead">
+        the friendly roast is a small-batch coffee roastery.
+        We roast to see how the flavours transform —
+        in each roast, each brew, each sip.
+      </p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="coffees.html">Our coffees</a>
+        <a class="btn btn-ghost" href="about.html">Our story</a>
       </div>
-      <div class="slide">
-        <img src="painting2.jpg" alt="Painting 2">
-        <div class="caption">Coffee Blend B</div>
+    </section>
+
+    <!-- WHAT WE'RE ABOUT -->
+    <section class="section container">
+      <h2>What we're about</h2>
+      <p>
+        We're not a big operation — and that's the point. Every batch is
+        roasted by hand, watched closely, and tasted together.
+        Our quest is simple: to share compelling coffee with our friends.
+      </p>
+    </section>
+
+    <!-- QUICK LOOK AT THE GEAR -->
+    <section class="section container">
+      <h2>From 250 grams to a full kilo</h2>
+      <p>
+        We started in 2021 on a modified Gene Cafe, roasting tiny 250 g
+        batches to learn the craft. Today we roast on an Aillio Bullet —
+        still in small batches, still learning something new every roast.
+      </p>
+      <p><a href="about.html">Read the whole story →</a></p>
+    </section>
+
+    <!-- CALL TO ACTION -->
+    <section class="cta section container">
+      <p class="lead">Want to try a bag?</p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="contact.html">Get in touch</a>
       </div>
-      <!-- Add more slides as needed -->
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>the friendly roast — small-batch coffee roastery</p>
+      <p>&copy; <span id="year">2026</span> the friendly roast. Roasted with friends, for friends.</p>
     </div>
-  </section>
-  
-  <!-- Scrollable Gallery for Past Coffees -->
-  <section id="past-coffees">
-    <h2>Past Roasts</h2>
-    <div class="gallery">
-      <div class="gallery-item">
-        <img src="coffee1.jpg" alt="Coffee 1">
-        <p>Coffee Blend A</p>
-      </div>
-      <div class="gallery-item">
-        <img src="coffee2.jpg" alt="Coffee 2">
-        <p>Coffee Blend B</p>
-      </div>
-      <!-- Add additional gallery items as needed -->
-    </div>
-  </section>
-  
-  <!-- About Section -->
-  <section id="about">
-    <h2>About Us</h2>
-    <p>
-      We are a small-batch coffee roaster with a passion for art and flavor. Our
-      unique process is reflected in every painting and cup. Our scale is small,
-      our style is distinctive, and our purpose is to bring you the best coffee experience.
-    </p>
-  </section>
-  
-  <!-- Basic Admin Panel (For Demo Purposes) -->
-  <!-- This panel lets you update the "About Us" text and saves it to localStorage -->
-  <section id="admin-panel" style="display: none;">
-    <h2>Admin Panel</h2>
-    <form id="admin-form">
-      <label for="about-text">Update About Text:</label>
-      <textarea id="about-text" rows="4" cols="50">
-We are a small-batch coffee roaster with a passion for art and flavor.
-      </textarea>
-      <button type="button" id="save-about">Save</button>
-    </form>
-  </section>
-  
-  <!-- Button to Toggle Admin Panel -->
-  <button id="admin-toggle">Admin</button>
-  
+  </footer>
+
   <script src="script.js"></script>
 </body>
 </html>

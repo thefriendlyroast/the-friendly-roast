@@ -3,73 +3,134 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>the friendly roast — small-batch coffee roastery</title>
-  <meta name="description" content="the friendly roast — a small-batch coffee roastery. We roast coffee to see how the flavours transform in each roast, each brew, each sip.">
+  <title>the friendly roast — hey Michael, what's roasting</title>
+  <meta name="description" content="Michael roasts one coffee at a time — a nano roastery roasting in small batches for friends.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <header class="site-header">
     <div class="container header-inner">
-      <a class="logo" href="index.html"><img class="logo-img" src="images/snail.jpg" alt="the friendly roast logo">the friendly roast</a>
+      <a class="logo" href="index.html"><img class="logo-img" src="images/snail.jpg" alt="the friendly roast logo"></a>
       <nav class="nav">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="coffees.html">Coffees</a>
-        <a href="contact.html">Contact</a>
+        <a href="index.html">hey Michael, what's roasting</a>
+        <a href="about.html">nano-roastery</a>
+        <a href="coffees.html">coffee archive</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <!-- HERO: the big welcome at the top of the page -->
+    <!-- INTRO -->
     <section class="hero container">
-      <h1>Coffee, roasted for friends.</h1>
-      <p class="lead">
-        the friendly roast is a small-batch coffee roastery.
-        We roast to see how the flavours transform —
-        in each roast, each brew, each sip.
-      </p>
-      <div class="btn-row">
-        <a class="btn btn-primary" href="coffees.html">Our coffees</a>
-        <a class="btn btn-ghost" href="about.html">Our story</a>
-      </div>
+      <h1>Coffee, taking it slow</h1>
+      <p class="lead">Michael roasts one coffee at a time.</p>
     </section>
 
-    <!-- WHAT WE'RE ABOUT -->
     <section class="section container">
-      <h2>What we're about</h2>
       <p>
-        We're not a big operation — and that's the point. Every batch is
-        roasted by hand, watched closely, and tasted together.
-        Our quest is simple: to share compelling coffee with our friends.
+        Coffee roasting is a hobby that fits into life — among work, family,
+        music, life. Solving the roast mystery one bean at a time is the
+        chosen pace.
+      </p>
+      <p>
+        That coffee is tasted and pondered every day for months. The roast
+        profile adapts. The longer the coffee is in his possession, the more
+        completely its flavour is communicated through the roast profile.
       </p>
     </section>
 
-    <!-- QUICK LOOK AT THE GEAR -->
+    <!-- ================= CURRENTLY ROASTING =================
+         When the current coffee changes: replace the details
+         below, and add the old coffee to the coffee archive.
+         ================================================ -->
     <section class="section container">
-      <h2>From 250 grams to a full kilo</h2>
-      <p>
-        We started in 2021 on a modified Gene Cafe, roasting tiny 250 g
-        batches to learn the craft. Today we roast on an Aillio Bullet —
-        still in small batches, still learning something new every roast.
-      </p>
-      <p><a href="about.html">Read the whole story →</a></p>
+      <h2>Currently roasting</h2>
+      <article class="feature">
+        <img class="taste-impression" src="images/mukunga.jpg"
+             alt="Taste impression — a little painting of the flavours perceived in Mukunga.">
+        <div>
+          <span class="tag">Washed · Kenya</span>
+          <h3>Mukunga</h3>
+          <p class="origin">Roasting since July 2026</p>
+          <div class="facts">
+            <div><strong>Origin</strong> Mukunga Estate, Kiambu County, Kenya</div>
+            <div><strong>Altitude</strong> 1,850 m</div>
+            <div><strong>Varietal</strong> Ruiru &amp; SL28</div>
+            <div><strong>Process</strong> Washed</div>
+          </div>
+          <p>
+            The estate lies between 1,800 and 1,850 meters above sea level, in the
+            coffee–tea transition zone. Soils are red volcanic and well-drained, with
+            reliable bimodal rainfall. The estate was started in 1970 — around 90% of
+            the trees are older Ruiru varieties, 10% newer SL28 plantings.
+          </p>
+          <p>
+            Cherries are selectively handpicked, de-pulped, then dry-fermented for
+            24 hours in open tanks before being washed and submerged in clean water
+            for another 24 hours. The wet parchment dries on raised beds for 10 to
+            18 days, depending on the weather.
+          </p>
+        </div>
+      </article>
     </section>
 
-    <!-- CALL TO ACTION -->
-    <section class="cta section container">
-      <p class="lead">Want to try a bag?</p>
-      <div class="btn-row">
-        <a class="btn btn-primary" href="contact.html">Get in touch</a>
-      </div>
+    <!-- ================= REQUEST A BAG ================= -->
+    <section class="section container">
+      <p>
+        the friendly roast is a nano roastery. We don't actively sell
+        commercially — we roast in small batches, fulfil orders for friends,
+        and welcome occasional custom.
+      </p>
+      <p>
+        If you'd like a bag, fill in the request below to see if and how to
+        get you a bag.
+      </p>
+
+      <!-- ==================================================
+           REQUEST FORM — powered by Formspree (free).
+
+           The form only sends once you plug in your own ID:
+             1. Sign up for free at https://formspree.io
+             2. Click "New form" and give it a name
+             3. Copy the form ID (looks like "xqkrostw")
+             4. Replace YOUR_FORM_ID in the action link below
+                with your ID.
+           ================================================== -->
+      <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <label for="name">Your name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Your email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="coffee">Which coffee would you like?</label>
+        <!-- Update the first option whenever the current coffee changes -->
+        <select id="coffee" name="coffee">
+          <option value="mukunga">Mukunga — the current roast</option>
+          <option value="archive">A coffee from the archive</option>
+          <option value="advice">Not sure — advise me</option>
+        </select>
+
+        <label for="size">How much?</label>
+        <select id="size" name="size">
+          <option value="250g">250 g</option>
+          <option value="500g">500 g</option>
+          <option value="1kg">1 kg</option>
+        </select>
+
+        <label for="message">Anything else? (optional)</label>
+        <textarea id="message" name="message" rows="4"
+          placeholder="Where you live, grind preference, a note…"></textarea>
+
+        <button type="submit" class="btn btn-primary">Send request</button>
+      </form>
     </section>
   </main>
 
   <footer class="footer">
     <div class="container">
-      <p>the friendly roast — small-batch coffee roastery</p>
-      <p>&copy; <span id="year">2026</span> the friendly roast. Roasted with friends, for friends.</p>
+      <p>&copy; 2023 the friendly roast. Roasted with friends, for friends.</p>
     </div>
   </footer>
 

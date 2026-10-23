@@ -45,7 +45,9 @@ a:hover { text-decoration: underline; }
   position: sticky;
   top: 0;
   z-index: 10;
-  background: rgba(250, 245, 238, 0.95);
+  background: rgba(250, 245, 238, 0.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--line);
 }
 
@@ -62,21 +64,20 @@ a:hover { text-decoration: underline; }
 .logo {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: var(--ink);
   text-decoration: none;
 }
 
 .logo-img {
-  width: 34px;
-  height: 34px;
-  border-radius: 8px;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
   object-fit: cover;
+  transition: transform 0.25s ease;
 }
 
-.nav { display: flex; gap: 18px; flex-wrap: wrap; }
+.logo:hover .logo-img { transform: rotate(-8deg) scale(1.05); }
+
+.nav { display: flex; gap: 22px; flex-wrap: wrap; }
 
 .nav a {
   color: var(--muted);
